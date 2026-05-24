@@ -1,8 +1,10 @@
 const form = document.getElementById("riskForm");
 const predictionText = document.getElementById("predictionText");
 const probabilityText = document.getElementById("probabilityText");
+const resultCard = document.getElementById("resultCard");
+const submitBtn = document.getElementById("submitBtn");
 
-const API_URL = "https://heart-disease-fastapi-bef9.onrender.com/predict";
+const API_URL = "https://heart-disease-fastapi-fycb.onrender.com/predict";
 
 form.addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -23,10 +25,15 @@ form.addEventListener("submit", async function (event) {
         thal: parseFloat(document.getElementById("thal").value)
     };
 
-    try {
-        predictionText.textContent = "Analyzing...";
-        probabilityText.textContent = "";
+    predictionText.textContent = "Analyzing patient data...";
+    probabilityText.textContent = "";
 
+    resultCard.classList.remove("show", "high-risk", "low-risk");
+
+    submitBtn.textContent = "Analyzing...";
+    submitBtn.disabled = true;
+
+    try {
         const response = await fetch(API_URL, {
             method: "POST",
             headers: {
@@ -40,9 +47,25 @@ form.addEventListener("submit", async function (event) {
         predictionText.textContent = result.prediction;
         probabilityText.textContent = `Risk Score: ${result.probability}%`;
 
+        if (result.prediction.includes("Detected")) {
+            resultCard.classList.add("high-risk");
+        } else {
+            resultCard.classList.add("low-risk");
+        }
+
+        setTimeout(() => {
+            resultCard.classList.add("show");
+        }, 100);
+
     } catch (error) {
         predictionText.textContent = "Something went wrong.";
         probabilityText.textContent = "Please try again.";
+
+        resultCard.classList.add("show");
+
         console.error(error);
+    } finally {
+        submitBtn.textContent = "Assess Risk";
+        submitBtn.disabled = false;
     }
 });
