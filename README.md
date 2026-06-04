@@ -1,12 +1,16 @@
-\# Heart Disease Prediction API 🫀
+# Heart Disease Prediction API 🫀
 
+https://angelinamoses.github.io/heart-disease-fastapi/
+
+
+Render link: https://heart-disease-fastapi-fycb.onrender.com/docs
 
 
 A machine learning API built with FastAPI that predicts heart disease risk using a trained Logistic Regression model.
 
 
 
-\## Project Overview
+## Project Overview
 
 
 
@@ -14,49 +18,25 @@ This project demonstrates an end-to-end machine learning deployment workflow:
 
 
 
-\- Data collection from UCI Machine Learning Repository
+- Data collection from UCI Machine Learning Repository
 
-\- Data preprocessing
+- Data preprocessing
 
-\- Missing value handling
+- Missing value handling
 
-\- Feature scaling
+- Feature scaling
 
-\- Logistic Regression model training
+- Logistic Regression model training
 
-\- Model evaluation
+- Model evaluation
 
-\- Model serialization with Joblib
+- Model serialization with Joblib
 
-\- FastAPI API development
+- FastAPI API development
 
-\- Interactive API documentation with Swagger UI
+- Interactive API documentation with Swagger UI
 
-\- Git/GitHub version control
-
-
-
-\---
-
-
-
-\## Tech Stack
-
-
-
-\- Python
-
-\- FastAPI
-
-\- Scikit-learn
-
-\- Pandas
-
-\- Joblib
-
-\- Uvicorn
-
-\- Jupyter Notebook
+- Git/GitHub version control
 
 
 
@@ -64,7 +44,31 @@ This project demonstrates an end-to-end machine learning deployment workflow:
 
 
 
-\## Model Details
+## Tech Stack
+
+
+
+- Python
+
+- FastAPI
+
+- Scikit-learn
+
+- Pandas
+
+- Joblib
+
+- Uvicorn
+
+- Jupyter Notebook
+
+
+
+---
+
+
+
+## Model Details
 
 
 
@@ -76,31 +80,31 @@ Features used:
 
 
 
-\- age
+- age
 
-\- sex
+- sex
 
-\- cp
+- cp
 
-\- trestbps
+- trestbps
 
-\- chol
+- chol
 
-\- fbs
+- fbs
 
-\- restecg
+- restecg
 
-\- thalach
+- thalach
 
-\- exang
+- exang
 
-\- oldpeak
+- oldpeak
 
-\- slope
+- slope
 
-\- ca
+- ca
 
-\- thal
+- thal
 
 
 
@@ -108,9 +112,9 @@ Target:
 
 
 
-\- 0 = No Heart Disease
+- 0 = No Heart Disease
 
-\- 1 = Heart Disease Detected
+- 1 = Heart Disease Detected
 
 
 
@@ -118,13 +122,13 @@ Model:
 
 
 
-\- Logistic Regression
+- Logistic Regression
 
-\- Scikit-learn Pipeline
+- Scikit-learn Pipeline
 
-\- Median Imputation
+- Median Imputation
 
-\- Standard Scaling
+- Standard Scaling
 
 
 
@@ -132,17 +136,17 @@ Performance:
 
 
 
-\- Accuracy: 86%
+- Accuracy: 86%
 
-\- Strong recall for disease detection
-
-
-
-\---
+- Strong recall for disease detection
 
 
 
-\## Project Structure
+---
+
+
+
+## Project Structure
 
 
 
